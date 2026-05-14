@@ -1,56 +1,291 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Freshshare | Sosyal Paylaşımın En Taze Hali</title>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FreshShare | Fazla Gıdanı Paylaş</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="site-header">
+    <a class="brand" href="#hero" aria-label="FreshShare ana sayfa">
+      <span class="brand-mark">F</span>
+      <span>FreshShare</span>
+    </a>
 
-    <header class="hero-bg text-white py-20 px-6 relative overflow-hidden">
-        <div class="max-w-6xl mx-auto flex flex-col md:row items-center justify-between relative z-10">
-            <div class="md:w-1/2 animate__animated animate__fadeInLeft">
-                <div class="badge mb-4">🌱 Yeni Nesil Sosyal Medya</div>
-                <h1 class="text-6xl font-black mb-6 leading-tight">Anı Yakala,<br><span class="text-accent">Taze Paylaş.</span></h1>
-                <p class="text-xl mb-8 opacity-90 font-light text-green-50">Freshshare ile topluluğunla olan bağını güçlendir. Hızlı, güvenli ve tamamen senin kontrolünde.</p>
-                <div class="flex gap-4">
-                    <button id="mainBtn" class="cta-button shadow-lg">Hemen Başla</button>
-                    <button class="secondary-button">Keşfet</button>
-                </div>
-            </div>
-            
-            <div class="md:w-1/3 mt-12 md:mt-0 glass-card animate__animated animate__fadeInUp">
-                <div class="screen-mockup shadow-inner flex items-center justify-center">
-                    <div class="logo-animation text-green-500 font-bold text-3xl">Freshshare</div>
-                </div>
-            </div>
-        </div>
-    </header>
+    <nav class="nav">
+      <a href="#features">Özellikler</a>
+      <a href="#ai">AI Analiz</a>
+      <a href="#flow">Akış</a>
+      <a href="#faq">SSS</a>
+    </nav>
 
-    <section class="py-20 px-6 max-w-6xl mx-auto">
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="feature-card animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
-                <div class="icon">⚡</div>
-                <h3>Süper Hızlı</h3>
-                <p>İçeriklerin anında yayına girer, bekleme süresi tarih olur.</p>
-            </div>
-            <div class="feature-card animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
-                <div class="icon">🔒</div>
-                <h3>Tam Güvenlik</h3>
-                <p>Supabase altyapısı ile verilerin her zaman güvende kalır.</p>
-            </div>
-            <div class="feature-card animate__animated animate__fadeInUp" style="animation-delay: 0.6s;">
-                <div class="icon">✨</div>
-                <h3>Modern Arayüz</h3>
-                <p>Kullanıcı dostu taze tasarımıyla yormayan bir deneyim.</p>
-            </div>
+    <button class="nav-cta" data-scroll="#cta">Başla</button>
+  </header>
+
+  <main>
+    <section id="hero" class="hero section">
+      <div class="hero-copy">
+        <span class="eyebrow">Akıllı gıda paylaşım platformu</span>
+        <h1>Fazla gıdanı paylaş, yakınındaki ürünleri rezerve et.</h1>
+        <p>
+          FreshShare; AI destekli tazelik analizi, rezervasyon, anlık mesajlaşma
+          ve kullanıcı profilleriyle gıda paylaşımını hızlı ve güvenli hale getirir.
+        </p>
+
+        <div class="hero-actions">
+          <button class="primary-btn" data-scroll="#ai">Gıdayı Analiz Et</button>
+          <button class="secondary-btn" data-scroll="#preview">Uygulamayı Gör</button>
         </div>
+
+        <div class="hero-stats">
+          <div><strong>AI</strong><span>Tazelik Puanı</span></div>
+          <div><strong>24/7</strong><span>Mesajlaşma</span></div>
+          <div><strong>0₺</strong><span>Ücretsiz Paylaşım</span></div>
+        </div>
+      </div>
+
+      <div id="preview" class="phone-shell">
+        <div class="phone-screen">
+          <div class="app-top">
+            <div class="avatar">Ö</div>
+            <div>
+              <h3>Hoşgeldin Ömer ...</h3>
+              <p>En son ürünleri aşağıdan takip edin.</p>
+            </div>
+            <span class="bell">⌁</span>
+          </div>
+
+          <div class="search-row">
+            <span>Ara...</span>
+            <b>⌕</b>
+          </div>
+
+          <div class="chips">
+            <button class="chip active">En Yeniler</button>
+            <button class="chip">Ücretsiz</button>
+            <button class="chip">Fırın</button>
+            <button class="chip">Sebze</button>
+          </div>
+
+          <h4>Bugünün Popülerleri</h4>
+
+          <article class="meal-row active-meal" data-category="Sebze">
+            <div class="meal-thumb tomato">🍅</div>
+            <div>
+              <h5>Taze Domates Paketi</h5>
+              <p>Anonim · 24 yorum · 12h</p>
+              <a>Belirtilmemiş</a>
+            </div>
+            <button>···</button>
+          </article>
+
+          <article class="meal-row" data-category="Fırın">
+            <div class="meal-thumb bread">🥖</div>
+            <div>
+              <h5>Fırın Ekmeği</h5>
+              <p>Ayşe · 8 yorum · 2h</p>
+              <a>Ücretsiz</a>
+            </div>
+            <button>···</button>
+          </article>
+
+          <div class="bottom-nav">
+            <span class="selected">⌂</span>
+            <span>＋</span>
+            <span>▱</span>
+            <span>●</span>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <script src="script.js"></script>
+    <section id="features" class="section">
+      <div class="section-heading">
+        <span class="eyebrow">Uygulamanın kalbi</span>
+        <h2>FreshShare ile her paylaşım daha düzenli.</h2>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card">
+          <span>🤖</span>
+          <h3>Akıllı Gıda Yükleme</h3>
+          <p>Fotoğrafı seç, “Gıdayı Analiz Et” butonuna bas, ürün adı ve kategori otomatik gelsin.</p>
+        </article>
+
+        <article class="feature-card">
+          <span>📍</span>
+          <h3>Yakındaki Ürünler</h3>
+          <p>Aktif ürünler ana sayfada listelenir; arama, kategori ve ücretsiz filtreleriyle hızlı bulunur.</p>
+        </article>
+
+        <article class="feature-card">
+          <span>💬</span>
+          <h3>Anlık Mesajlaşma</h3>
+          <p>Satıcı ile Mesajlaş butonu sayesinde rezervasyon ve teslim detayları hızlıca konuşulur.</p>
+        </article>
+
+        <article class="feature-card">
+          <span>📊</span>
+          <h3>Paylaştığım Yemekler</h3>
+          <p>Haftalık görüntülenme, toplam beğeni ve kazanç bilgileri tek ekranda takip edilir.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="ai" class="section split-section">
+      <div class="analysis-card">
+        <div class="analysis-header">
+          <span class="icon-box">▣</span>
+          <h3>Analiz Sonuçları</h3>
+          <small>YZ Algılandı</small>
+        </div>
+
+        <div class="product-result">
+          <span class="product-icon">🍅</span>
+          <div>
+            <small>ÜRÜN ADI</small>
+            <strong>Domates</strong>
+            <p>Sebze · Taze Ürün</p>
+          </div>
+        </div>
+
+        <div class="score-row">
+          <b>TAZELİK PUANI</b>
+          <span>86 / 100</span>
+        </div>
+
+        <div class="score-labels">
+          <span>Düşük</span>
+          <span>Mükemmel</span>
+        </div>
+
+        <div class="progress">
+          <span></span>
+        </div>
+
+        <div class="expiry">
+          <div>
+            <b>TAHMİNİ SON KULLANMA</b>
+            <p>3 gün içinde</p>
+          </div>
+          <strong>Taze</strong>
+        </div>
+
+        <div class="warning">
+          <b>BOZULMA UYARISI</b>
+          <p>Serin ve kuru yerde saklayın. 3 gün içinde tüketilmesi önerilir.</p>
+        </div>
+      </div>
+
+      <div class="split-copy">
+        <span class="eyebrow">AI destekli kontrol</span>
+        <h2>Tazelik Puanı ile ürün bilgisi daha anlaşılır.</h2>
+        <p>
+          FreshShare, ürün görselini analiz ederek kategori, tahmini son kullanım,
+          saklama önerisi ve bozulma uyarısını kullanıcıya okunabilir bir kartta sunar.
+        </p>
+        <button class="primary-btn" data-scroll="#flow">Akışı Gör</button>
+      </div>
+    </section>
+
+    <section id="flow" class="section">
+      <div class="section-heading">
+        <span class="eyebrow">Nasıl çalışır?</span>
+        <h2>Paylaşım, rezervasyon ve teslim tek akışta.</h2>
+      </div>
+
+      <div class="flow-grid">
+        <article>
+          <span>1</span>
+          <h3>Fotoğraf yükle</h3>
+          <p>Ürün paylaşma ekranında görsel seçilir ve AI analizi başlatılır.</p>
+        </article>
+
+        <article>
+          <span>2</span>
+          <h3>Ürünü yayınla</h3>
+          <p>Fiyat, açıklama ve kategori tamamlanır; ürün herkesin ana sayfasında görünür.</p>
+        </article>
+
+        <article>
+          <span>3</span>
+          <h3>Rezervasyon yap</h3>
+          <p>Kullanıcı ürünü rezerve eder; ürün sahibi talebi onaylar veya reddeder.</p>
+        </article>
+
+        <article>
+          <span>4</span>
+          <h3>Mesajlaş ve teslim et</h3>
+          <p>Satıcıyla konuşulur, teslim tamamlanınca rezervasyon kapatılır.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section stats-section">
+      <div>
+        <strong>2.4K</strong>
+        <span>Haftalık Görüntülenmeler</span>
+      </div>
+      <div>
+        <strong>847</strong>
+        <span>Toplam Beğeni</span>
+      </div>
+      <div>
+        <strong>₺1.2K</strong>
+        <span>Kazanç Takibi</span>
+      </div>
+    </section>
+
+    <section id="faq" class="section faq-section">
+      <div class="section-heading">
+        <span class="eyebrow">Sıkça Sorulan Sorular</span>
+        <h2>FreshShare hakkında merak edilenler.</h2>
+      </div>
+
+      <div class="faq-list">
+        <article class="faq-item open">
+          <button>
+            Nasıl ürün eklerim?
+            <span>+</span>
+          </button>
+          <p>Akıllı Gıda Yükleme ekranından fotoğraf seçip analiz ettikten sonra ürünü yayınlayabilirsin.</p>
+        </article>
+
+        <article class="faq-item">
+          <button>
+            Rezervasyon nasıl çalışır?
+            <span>+</span>
+          </button>
+          <p>Bir ürün için talep gönderilir; ürün sahibi onayladığında teslim süreci başlar.</p>
+        </article>
+
+        <article class="faq-item">
+          <button>
+            Ücretsiz ürün paylaşabilir miyim?
+            <span>+</span>
+          </button>
+          <p>Evet. Ürün eklerken “Ücretsiz paylaş” seçeneğini işaretleyebilirsin.</p>
+        </article>
+
+        <article class="faq-item">
+          <button>
+            Mesajlaşma anlık mı?
+            <span>+</span>
+          </button>
+          <p>Evet. Satıcı ve alıcı konuşmaları anlık olarak güncellenir.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="cta" class="section final-cta">
+      <span class="brand-mark large">F</span>
+      <h2>FreshShare ile fazla gıdan değer kazansın.</h2>
+      <p>Paylaş, rezerve et, mesajlaş ve teslim sürecini tek uygulamada yönet.</p>
+      <button class="primary-btn" data-scroll="#hero">Yukarı Dön</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
